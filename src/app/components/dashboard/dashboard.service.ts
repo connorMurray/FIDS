@@ -19,6 +19,7 @@ export class DashboardService implements IDashboardService {
   }
 
   public getFlights(): Observable<IFlightInformation> {
+    console.info('Attempting to retrieve flights from aodb');
     let flightRecordUrl: string = '/flightrecords';
     return this._http.get(this.aodbUrl + flightRecordUrl)
       .map(this.extractData)
@@ -33,7 +34,7 @@ export class DashboardService implements IDashboardService {
 
   private handleError(error: any) {
     let errMsg = (error.message) ? error.message : error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); //TODO: replace with logging library
+    console.error(errMsg);
     return Observable.throw(errMsg);
   }
 }
