@@ -3,6 +3,7 @@ export interface IFlightInformation {
     adi: string;
     flightDate: string;
     flightRecord: IFlightRecord[];
+    id: number;
 }
 
 export interface IFlightRecord {
@@ -14,10 +15,13 @@ export interface IFlightRecord {
     statusText: string;
     city: string;
     operatingCarrier: IOperatingCarrier;
+    remark: string;
+    id: number;
 }
 
 export interface IOperatingCarrier {
     airlineCode: string;
     flightNumber: string;
     airline: string;
+    id: number;
 }
