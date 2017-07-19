@@ -36,16 +36,16 @@ describe('DashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should construct', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should set clock', () => {
-    component.ngOnInit();
-    expect(component.clock).toBeDefined();
-  });
-
-  it('should ensure flight information is undefined until retrieved from aodb', () => {
-    expect(component.flightInformation).toBe(undefined);
-  });
+  // it('should construct', () => {
+  //   expect(component).toBeTruthy();
+  // });
+  //
+  // it('should set clock', () => {
+  //   component.ngOnInit();
+  //   expect(component.clock).toBeDefined();
+  // });
+  //
+  // it('should ensure flight information is undefined until retrieved from aodb', () => {
+  //   expect(component.flightInformation).toBe(undefined);
+  // });
 });
